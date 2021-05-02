@@ -20,7 +20,7 @@
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
       <label>
-        <a href=""><img src="images/brand.png" class="brand-logo"></img></a>
+        <a href=""><img src="images/brand.png" class="brand-logo" id="brand-logo"></img></a>
       </label>
       <ul>
         <li><a href="#home" class="active">Home</a></li>
@@ -28,6 +28,7 @@
         <li><a href="#skill">Skill</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#contact">Contact</a></li>
+        <li><i class="fas fa-moon" id="icon-theme"></i></li>
       </ul>
     </div>
   </nav>
@@ -36,15 +37,15 @@
     <div class="content1">
       <h1>Assalamu'alaikum,<br />
         I'm Muhammad<span> Ridwan </span>Pratama</h1>
-      <p>Designer, IU / UX, Photographer, Full Stack Website Developer</p>
+      <p>IU / UX, Graphic Designer, Full Stack Website Developer</p>
       <a href="" class="tombol">Hire Me</a>
       <a href="" class="outline-tombol">Download CV</a>
     </div>
 
     <div class="image-bg1">
-      <img src="images/pola1.png" class="bg-pola1"></img>
+      <img src="images/pola-light.png" class="bg-pola1" id="bg-pola1"></img>
       <img src="images/pola.png" class="bg-image1"></img>
-      <img src="images/ridwan.png" class="main-image"></img>
+      <img src="images/ridwan-min.png" class="main-image"></img>
       <img src="images/pola2.png" class="bg-pola2"></img>
       <img src="images/pola3.png" class="bg-pola3"></img>
       <img src="images/pola4.png" class="bg-pola4"></img>
@@ -52,14 +53,16 @@
     </div>
 
     <div class="sosmed-link">
-      <a href="https://instagram.com/_ridwan23" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://instagram.com/frontendridwan" target="_blank"><i class="fab fa-instagram"></i></a>
       <a href="https://github.com/muhridwan23" target="_blank"><i class="fab fa-github"></i></a>
       <a href="https://www.linkedin.com/in/muhammad-ridwan-pratama/" target="_blank"><i class="fab fa-linkedin"></i></a>
       <a href="https://gitlab.com/muhridwan23" target="_blank"><i class="fab fa-gitlab"></i></a>
+      <a href="" target="_blank"><i class="fab fa-dribbble"></i></a>
+      <a href="" target="_blank"><i class="fab fa-behance"></i></a>
     </div>
   </section>
 
-  <section class="about" id="about">
+  <!-- <section class="about" id="about">
     <div class="about-container">
       <h2 class="about-title">About Me</h2>
       <hr class="about-hr">
@@ -79,7 +82,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- <section class="skill" id="skill">
     <div class="skill-container">
@@ -152,7 +155,7 @@
 
   <section class="section5" id="contact">
   </section> -->
-  <footer class="footer">
+  <!-- <footer class="footer">
     <hr class="footer-hr">
     <div class="footer-container">
       <p>
@@ -165,11 +168,34 @@
         </span>
       </p>
     </div>
-  </footer>
+  </footer> -->
 
-  <a href="#" class="scrolltop show-scroll" id="scroll-top">
+  <!-- <a href="#" class="scrolltop show-scroll" id="scroll-top">
     <i class='fas fa-arrow-alt-circle-up scrolltop__icon'></i>
-  </a>
+  </a> -->
+
+  <script>
+    var iconTheme = document.getElementById("icon-theme");
+    var brand = document.getElementById("brand-logo");
+    var pola = document.getElementById("bg-pola1");
+
+    iconTheme.onclick = function(){
+      document.body.classList.toggle("dark-theme");
+
+      if(document.body.classList.contains("dark-theme")){
+        iconTheme.classList.remove("fa-moon");
+        iconTheme.classList.add("fa-sun");
+        brand.src = "images/brand-light.png";
+        pola.src = "images/pola-dark.png";
+      } else {
+        iconTheme.classList.remove("fa-sun");
+        iconTheme.classList.add("fa-moon");
+        brand.src = "images/brand.png";
+        pola.src = "images/pola-light.png";
+      }
+    }
+
+  </script>
 
 </body>
 
