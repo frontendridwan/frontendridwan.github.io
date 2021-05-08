@@ -15,12 +15,23 @@
 
 <body id="home">
 
+  <div class="preloader" id="preloader">
+    <div class="loader">
+        <div class="side">
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="bottom"></div>
+        </div>
+    </div>
+  </div>
+
   <nav class="navbar">
     <div class="navbar-container">
       <input type="checkbox" id="check">
       <label for="check" class="checkbtn"><i class="fas fa-bars"></i></label>
       <label>
-        <a href=""><img src="images/brand.png" class="brand-logo" id="brand-logo"></img></a>
+        <a href=""><img src="images/brand.svg" class="brand-logo" id="brand-logo"></img></a>
       </label>
       <ul>
         <li><a href="#home" class="active">Home</a></li>
@@ -43,13 +54,13 @@
     </div>
 
     <div class="image-bg1">
-      <img src="images/pola-light.png" class="bg-pola1" id="bg-pola1"></img>
-      <img src="images/pola.png" class="bg-image1"></img>
-      <img src="images/ridwan-min.png" class="main-image"></img>
-      <img src="images/pola2.png" class="bg-pola2"></img>
-      <img src="images/pola3.png" class="bg-pola3"></img>
-      <img src="images/pola4.png" class="bg-pola4"></img>
-      <img src="images/pola5.png" class="bg-pola5"></img>
+      <img src="images/pola-light.svg" class="bg-pola1" id="bg-pola1"></img>
+      <img src="images/pola.svg" class="bg-image1"></img>
+      <img src="images/ridwan_Img.png" class="main-image"></img>
+      <img src="images/pola2.svg" class="bg-pola2"></img>
+      <img src="images/pola3.svg" class="bg-pola3"></img>
+      <img src="images/pola4.svg" class="bg-pola4"></img>
+      <img src="images/pola5.svg" class="bg-pola5"></img>
     </div>
 
     <div class="sosmed-link">
@@ -174,6 +185,23 @@
     <i class='fas fa-arrow-alt-circle-up scrolltop__icon'></i>
   </a> -->
 
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
+
+  <script type="text/javascript">
+    var preload = document.getElementById("preloader");
+
+    window.onload = function(){
+      setTimeout(() => {
+        preload.classList.add("loaded");
+        preload.style.display = 'none';
+      }, 1500);
+    };
+
+    // $(window).on("load", function(){
+	  //   $(".preloader").delay(1500).fadeOut("slow").addClass("loaded");
+    // });
+  </script>
+
   <script>
     var iconTheme = document.getElementById("icon-theme");
     var brand = document.getElementById("brand-logo");
@@ -185,13 +213,13 @@
       if(document.body.classList.contains("dark-theme")){
         iconTheme.classList.remove("fa-moon");
         iconTheme.classList.add("fa-sun");
-        brand.src = "images/brand-light.png";
-        pola.src = "images/pola-dark.png";
+        brand.src = "images/brand-light.svg";
+        pola.src = "images/pola-dark.svg";
       } else {
         iconTheme.classList.remove("fa-sun");
         iconTheme.classList.add("fa-moon");
-        brand.src = "images/brand.png";
-        pola.src = "images/pola-light.png";
+        brand.src = "images/brand.svg";
+        pola.src = "images/pola-light.svg";
       }
     }
 
