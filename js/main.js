@@ -1,3 +1,13 @@
+/*==================== PRELOADER ====================*/
+var preload = document.getElementById("preloader");
+
+  window.onload = function(){
+    setTimeout(() => {
+      preload.classList.add("loaded");
+      preload.style.display = 'none';
+    }, 1500);
+  };
+
 /*==================== MENU SHOW Y HIDDEN ====================*/
 const navMenu = document.getElementById('nav-menu'),
   navToggle = document.getElementById('nav-toggle'),
