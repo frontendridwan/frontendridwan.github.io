@@ -971,7 +971,6 @@ img {
 .footer__copy {
   font-size: var(--small-font-size);
   text-align: center;
-  color: var(--first-color-lighter);
 }
 
 .footer__terms {
@@ -982,18 +981,19 @@ img {
 
 .footer__terms-link {
   font-size: var(--small-font-size);
-  color: var(--first-color-lighter);
 }
 
 .footer__terms-link:hover {
-  color: var(--text-color);
+  color: var(--first-color-lighter);
 }
 
 .footer__title,
 .footer__description,
 .footer__subtitle,
 .footer__link,
-.footer__social {
+.footer__social,
+.footer__copy,
+.footer__terms-link {
   color: #fff;
 }
 
